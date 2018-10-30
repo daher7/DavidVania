@@ -31,6 +31,8 @@ public class Player : MonoBehaviour {
             // Vamos a comprobar si el personaje esta en el suelo o en el aire
             if (EstaEnSuelo()) {
                 rb2D.velocity = new Vector2(xPos * speed, jumpForce);
+            } else {
+                rb2D.velocity = new Vector2(xPos * speed, ySpeedActual);
             }
         } else {
             rb2D.velocity = new Vector2(xPos * speed, ySpeedActual);
