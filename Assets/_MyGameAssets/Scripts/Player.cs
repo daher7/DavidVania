@@ -80,6 +80,7 @@ public class Player : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
+        print(collision.gameObject.name);
         estoyLanzado = false;
         if (collision.gameObject.CompareTag("Moneda")) { 
             IncrementarPuntuacion(1);
