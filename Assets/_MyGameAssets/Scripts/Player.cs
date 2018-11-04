@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
     [SerializeField] LayerMask floorLayer;
     [SerializeField] Text textPuntuacion;
     [SerializeField] float speed = 5f;
+    [SerializeField] float xPos;
     int vidasMaximas = 3;
     [SerializeField] float jumpForce = 100f;
     [SerializeField] int vidas;
@@ -18,7 +19,7 @@ public class Player : MonoBehaviour {
     [SerializeField] int fuerzaPinchos; 
     [SerializeField] Transform posPies;
     [SerializeField] float radioOverlap = 0.01f;
-    bool saltando = false;
+    public bool saltando = false;
     bool estoyLanzado = false;
 
 	void Start () {
@@ -28,11 +29,19 @@ public class Player : MonoBehaviour {
 	}
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            saltando = true;
+        xPos = Input.GetAxis("Horizontal");
+        if (saltando && Input.GetKeyDown(KeyCode.Space)) {
+            rb2D.AddForce(new Vector3(0, jumpForce));
         }
     }
 
+    private void FixedUpdate()
+    {
+        saltando = Physics2D.OverlapCircle(posPies.position, radioOverlap, floorLayer);
+        rb2D.velocity = new Vector2(xPos * speed, rb2D.velocity.y);
+    }
+
+    /*
     void FixedUpdate () {   
         float xPos = Input.GetAxis("Horizontal");
         float ySpeedActual = rb2D.velocity.y;
