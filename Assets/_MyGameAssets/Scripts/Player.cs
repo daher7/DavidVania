@@ -15,10 +15,12 @@ public class Player : MonoBehaviour {
     [SerializeField] int vidaActual = 100;
     [SerializeField] int vidaMaxima = 100;
     [SerializeField] int puntos = 0;
-    Rigidbody2D rb2D;
-    [SerializeField] int fuerzaPinchos;
+    
+    [SerializeField] float fuerzaPinchos;
     [SerializeField] Transform posPies;
     [SerializeField] float radioOverlap = 0.01f;
+    Animator playerAnimator;
+    Rigidbody2D rb2D;
     public bool saltando = false;
     bool estoyLanzado = false;
 
@@ -26,6 +28,7 @@ public class Player : MonoBehaviour {
 
         rb2D = GetComponent<Rigidbody2D>();
         textPuntuacion.text = "Score: " + puntos.ToString();
+        playerAnimator = GetComponent<Animator>();
     }
 
     private void Update() {
@@ -48,6 +51,14 @@ public class Player : MonoBehaviour {
         float ySpeedActual = rb2D.velocity.y;
 
         if (!estoyLanzado) {
+
+            if(Mathf.Abs(xPos) > 0.01f) {
+                playerAnimator.SetBool("Andando", true);
+            } else {
+                playerAnimator.SetBool("Andando", false);
+            }
+                                
+
             // Vamos a comprobar si el personaje esta en el suelo o en el aire
             if (saltando) {
                 saltando = false;
@@ -95,7 +106,7 @@ public class Player : MonoBehaviour {
         if (vidaActual <= 0) {
             vidaActual = 0;
         }
-        //estoyLanzado = true;
+        estoyLanzado = true;
         rb2D.AddRelativeForce(new Vector3(fuerzaPinchos * -1, fuerzaPinchos), ForceMode2D.Impulse);
     }
     /*

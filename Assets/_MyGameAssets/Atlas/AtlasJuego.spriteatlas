@@ -56,6 +56,8 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 74ce4bc441ae77940ace3c4dae05a1f9, type: 3}
   - {fileID: 21300000, guid: a3a4e9f49391ed041aa68616ce038dbd, type: 3}
   - {fileID: 21300000, guid: 3f01d105955ec8d409dbc303b079d557, type: 3}
+  - {fileID: 21300000, guid: 9b1622651f2290a46a01527d8c7577ad, type: 3}
+  - {fileID: 21300000, guid: df8174755ba01bb4b8be478cada78ed4, type: 3}
   - {fileID: 21300000, guid: 8593ace5b253c514288090a480c57374, type: 3}
   - {fileID: 21300000, guid: 687a92664b4f4014bb7723248cb4354a, type: 3}
   - {fileID: 21300000, guid: 169c738601686406e9dc499aecfe1539, type: 3}
@@ -65,19 +67,28 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 7be28b47f10afaa47b17940cd878532f, type: 3}
   - {fileID: 21300000, guid: 9b72bf7740f9d7a4783e3a40135c314f, type: 3}
   - {fileID: 21300000, guid: 044c03972a9766144862963c98f06dfe, type: 3}
+  - {fileID: 21300000, guid: ce78bd98303745341960127099fd9ac3, type: 3}
   - {fileID: 21300000, guid: 721497e8b6c6d5e41b666646e991291d, type: 3}
   - {fileID: 21300000, guid: 9345b9f80cb3aa740ae3dfe87238bffb, type: 3}
   - {fileID: 21300000, guid: 9dc3ef09ca801bd4cbf0fcb1a1b738af, type: 3}
   - {fileID: 21300000, guid: f1805b4abfdace04a8cc6afabc752adb, type: 3}
+  - {fileID: 21300000, guid: fa6e9c6ab881c234781c045acaf25f06, type: 3}
   - {fileID: 21300000, guid: fd9bf4fa9e9bc5c488862d022102e2d1, type: 3}
   - {fileID: 21300000, guid: aa23347b3e455664f8cc12e1e0cf61e4, type: 3}
+  - {fileID: 21300000, guid: 4114847b890d2054a8a9ea471f3e109e, type: 3}
+  - {fileID: 21300000, guid: 35eae18bafb41ef45a6b762f35f8050b, type: 3}
   - {fileID: 21300000, guid: 187e7acb1ade7b0478f83acfad668eb7, type: 3}
+  - {fileID: 21300000, guid: 724af4db1e92736489142c0c4885ca5f, type: 3}
   - {fileID: 21300000, guid: 8da7302c13a80c34fab9290495c7c04b, type: 3}
+  - {fileID: 21300000, guid: c000672c34824fc4785318c999793e1c, type: 3}
+  - {fileID: 21300000, guid: 63d0167ca2b7816499134ab0d87f7a46, type: 3}
   - {fileID: 21300000, guid: fce502ec4fc98aa43a7f0f0d4a66ec0e, type: 3}
   - {fileID: 21300000, guid: 7753a53e9693f954b95873e1623a1c84, type: 3}
   - {fileID: 21300000, guid: f88115beac427814f9b1fd551ededda9, type: 3}
   - {fileID: 21300000, guid: a8aebfbef6feb754dad33b8633070e54, type: 3}
   - {fileID: 21300000, guid: e4a4341fedecd2f4cb1592df461b745e, type: 3}
+  - {fileID: 21300000, guid: 97437c6f6c8dbce4a9cd9485b51fda7e, type: 3}
+  - {fileID: 21300000, guid: fc6227ef358192b4da9c9c96f6e35de3, type: 3}
   m_PackedSpriteNamesToIndex:
   - liquidWaterTop_mid
   - stone
@@ -89,6 +100,8 @@ SpriteAtlas:
   - boxAlt
   - stoneWall
   - stoneCliffLeft
+  - p1_walk03
+  - p1_walk04
   - heart
   - boxWarning
   - bush-large
@@ -98,18 +111,27 @@ SpriteAtlas:
   - stoneHalf
   - lock_blue
   - stoneHalfMid
+  - p1_walk08
   - stoneHalfLeft
   - liquidWater
   - coin
   - stoneHillLeft2
+  - p1_walk09
   - lock_yellow
   - stoneMid
+  - p1_walk10
+  - p1_walk07
   - stoneCliffRight
+  - p1_walk02
   - lock_red
+  - p1_walk11
+  - p1_walk01
   - lock_green
   - stoneRight
   - liquidWaterTop
   - stoneCliffRightAlt
   - stoneHalfRight
+  - p1_walk06
+  - p1_walk05
   m_Tag: AtlasJuego
   m_IsVariant: 0
