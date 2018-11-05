@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: AtlasJuego
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 2
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 43e0bd16d48ea60498fdb257ed30eddd, type: 3}
+    - {fileID: 102900000, guid: 4f7889270747f2e418b4e6cf1488a9ed, type: 3}
+    - {fileID: 102900000, guid: 0fe0ea9050496684593ea67a3abc66d3, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 9b5f5b70290457342ba2c02cbd4ce60a, type: 3}
+  - {fileID: 21300000, guid: 7d2e14619909d6a4aadd4a2950e01cce, type: 3}
+  - {fileID: 21300000, guid: 5f792002e4c28f6419cffa7b06853f05, type: 3}
+  - {fileID: 21300000, guid: 93d8d7030cb3d0a4cb04918c0396c39c, type: 3}
+  - {fileID: 21300000, guid: ddac9c333537e4a4eb2d97f9ca5c94b1, type: 3}
+  - {fileID: 21300000, guid: 51f5dda3093f04244b1e8a7f3f5b208d, type: 3}
+  - {fileID: 21300000, guid: 3caec724bb0ae5b4c9af6263e1b0ea45, type: 3}
+  - {fileID: 21300000, guid: 74ce4bc441ae77940ace3c4dae05a1f9, type: 3}
+  - {fileID: 21300000, guid: a3a4e9f49391ed041aa68616ce038dbd, type: 3}
+  - {fileID: 21300000, guid: 3f01d105955ec8d409dbc303b079d557, type: 3}
+  - {fileID: 21300000, guid: 8593ace5b253c514288090a480c57374, type: 3}
+  - {fileID: 21300000, guid: 687a92664b4f4014bb7723248cb4354a, type: 3}
+  - {fileID: 21300000, guid: 169c738601686406e9dc499aecfe1539, type: 3}
+  - {fileID: 21300000, guid: 31abc607fc768b54ba21bd80bdb09787, type: 3}
+  - {fileID: 21300000, guid: cf2ed227319848040a3deaeaaeacf87e, type: 3}
+  - {fileID: 21300000, guid: 2e93c637a24e04d8ea6b2cfd9df53739, type: 3}
+  - {fileID: 21300000, guid: 7be28b47f10afaa47b17940cd878532f, type: 3}
+  - {fileID: 21300000, guid: 9b72bf7740f9d7a4783e3a40135c314f, type: 3}
+  - {fileID: 21300000, guid: 044c03972a9766144862963c98f06dfe, type: 3}
+  - {fileID: 21300000, guid: 721497e8b6c6d5e41b666646e991291d, type: 3}
+  - {fileID: 21300000, guid: 9345b9f80cb3aa740ae3dfe87238bffb, type: 3}
+  - {fileID: 21300000, guid: 9dc3ef09ca801bd4cbf0fcb1a1b738af, type: 3}
+  - {fileID: 21300000, guid: f1805b4abfdace04a8cc6afabc752adb, type: 3}
+  - {fileID: 21300000, guid: fd9bf4fa9e9bc5c488862d022102e2d1, type: 3}
+  - {fileID: 21300000, guid: aa23347b3e455664f8cc12e1e0cf61e4, type: 3}
+  - {fileID: 21300000, guid: 187e7acb1ade7b0478f83acfad668eb7, type: 3}
+  - {fileID: 21300000, guid: 8da7302c13a80c34fab9290495c7c04b, type: 3}
+  - {fileID: 21300000, guid: fce502ec4fc98aa43a7f0f0d4a66ec0e, type: 3}
+  - {fileID: 21300000, guid: 7753a53e9693f954b95873e1623a1c84, type: 3}
+  - {fileID: 21300000, guid: f88115beac427814f9b1fd551ededda9, type: 3}
+  - {fileID: 21300000, guid: a8aebfbef6feb754dad33b8633070e54, type: 3}
+  - {fileID: 21300000, guid: e4a4341fedecd2f4cb1592df461b745e, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - liquidWaterTop_mid
+  - stone
+  - web-17-700x408
+  - paintex_spikes
+  - stoneHillRight2
+  - boxItemAlt
+  - stoneLeft
+  - boxAlt
+  - stoneWall
+  - stoneCliffLeft
+  - heart
+  - boxWarning
+  - bush-large
+  - 5146_original
+  - stoneCliffLeftAlt
+  - Player
+  - stoneHalf
+  - lock_blue
+  - stoneHalfMid
+  - stoneHalfLeft
+  - liquidWater
+  - coin
+  - stoneHillLeft2
+  - lock_yellow
+  - stoneMid
+  - stoneCliffRight
+  - lock_red
+  - lock_green
+  - stoneRight
+  - liquidWaterTop
+  - stoneCliffRightAlt
+  - stoneHalfRight
+  m_Tag: AtlasJuego
+  m_IsVariant: 0
