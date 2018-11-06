@@ -30,6 +30,7 @@ public class Player : MonoBehaviour {
     public float fuerzaImpactoY = 2f;
 
     private void Awake() {
+        // Para que las vidas esten disponibles desde el principio
         vidas = vidasMaximas;
         salud = saludMaxima;
     }
