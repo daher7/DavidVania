@@ -10,6 +10,7 @@ public class Player : MonoBehaviour {
 
     [SerializeField] LayerMask floorLayer;
     [SerializeField] Text textPuntuacion;
+    [SerializeField] Text textSalud;
     [SerializeField] float speed = 5f;
     [SerializeField] float xPos;
     int vidasMaximas = 3;
@@ -19,22 +20,24 @@ public class Player : MonoBehaviour {
     [SerializeField] int salud;
     int saludMaxima = 100;
 
-
     [SerializeField] float fuerzaPinchos;
     [SerializeField] Transform posPies;
     [SerializeField] float radioOverlap = 0.01f;
     Animator playerAnimator;
     Rigidbody2D rb2D;
 
-    public float fuerzaImpactoX = 0.2f;
-    public float fuerzaImpactoY = 0.3f;
+    public float fuerzaImpactoX = 2f;
+    public float fuerzaImpactoY = 2f;
 
-    void Start() {
-
+    private void Awake() {
         vidas = vidasMaximas;
         salud = saludMaxima;
+    }
+
+    void Start() {
         rb2D = GetComponent<Rigidbody2D>();
         textPuntuacion.text = "Score: " + puntos.ToString();
+        textSalud.text = "Health: " + salud.ToString();
         playerAnimator = GetComponent<Animator>();
     }
 
@@ -110,19 +113,23 @@ public class Player : MonoBehaviour {
             vidas--;
             salud = saludMaxima;
         }
-        if(estado == EstadoPlayer.AndandoDer) {
+        if (estado == EstadoPlayer.AndandoDer) {
             print("aplicando fuerza 1");
             estado = EstadoPlayer.Sufriendo;
             GetComponent<Rigidbody2D>().transform.Translate(new Vector2(0, 0.1f));
             GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(-fuerzaImpactoX, fuerzaImpactoY), ForceMode2D.Impulse);
-        } else if(estado == EstadoPlayer.AndandoIzq) {
+        } else if (estado == EstadoPlayer.AndandoIzq) {
             print("aplicando fuerza 2");
             estado = EstadoPlayer.Sufriendo;
             print(fuerzaImpactoX + ":" + fuerzaImpactoY);
             GetComponent<Rigidbody2D>().transform.Translate(new Vector2(0, 0.1f));
             GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(fuerzaImpactoX, fuerzaImpactoY), ForceMode2D.Impulse);
         }
-        
+        textSalud.text = salud.ToString();
+    }
+
+    public int GetVidas() {
+        return this.vidas;
     }
 
     /*
