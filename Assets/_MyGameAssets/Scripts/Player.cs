@@ -41,6 +41,13 @@ public class Player : MonoBehaviour {
         textPuntuacion.text = "Score: " + puntos.ToString();
         textSalud.text = "Health: " + salud.ToString();
         playerAnimator = GetComponent<Animator>();
+
+        // Recuperamos la posicion del jugador
+        Vector2 position = GameController.GetPosition();
+        // Vamos a comprobar si el fichero de datos del checkpoint está vacio o no
+        if(position != Vector2.zero) {
+            this.transform.position = position;
+        }
     }
 
     private void Update() {
