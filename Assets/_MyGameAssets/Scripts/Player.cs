@@ -18,6 +18,7 @@ public class Player : MonoBehaviour {
     [SerializeField] int vidas;
     [SerializeField] int puntos = 0;
     [SerializeField] int salud;
+    [SerializeField] UIScript uiScript;
     int saludMaxima = 100;
 
     [SerializeField] float fuerzaPinchos;
@@ -112,7 +113,9 @@ public class Player : MonoBehaviour {
         salud -= danyo;
         if (salud <= 0) {
             vidas--;
+            uiScript.RestarVida();
             salud = saludMaxima;
+            
         }
         if (estado == EstadoPlayer.AndandoDer) {
             print("aplicando fuerza 1");
@@ -127,6 +130,26 @@ public class Player : MonoBehaviour {
             GetComponent<Rigidbody2D>().AddRelativeForce(new Vector2(fuerzaImpactoX, fuerzaImpactoY), ForceMode2D.Impulse);
         }
         textSalud.text = salud.ToString();
+    }
+
+    public void RecibirSalud (int incrementoSalud) {
+        salud += incrementoSalud;
+        salud = Mathf.Min(salud, saludMaxima);
+        /*
+         * ALTERNATIVA A USAR LA EXPRESION MATHF.MIN
+        if(salud > saludMaxima) {
+            salud = saludMaxima;
+        }
+        */
+        textSalud.text = "Health: " + salud.ToString();
+    }
+
+    public void RecibirVida(int vidaSumada) {
+        vidas += vidaSumada;
+        uiScript.SumarVida();
+        if (vidas > vidasMaximas) {
+            vidas = vidasMaximas;
+        }
     }
 
     public int GetVidas() {
