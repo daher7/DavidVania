@@ -1,17 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Mosca : MonoBehaviour {
 
+    Slider slider;
     bool haciaDerecha = false;
     public Transform limiteDerecho;
     public Transform limiteIzquierdo;
     [SerializeField] int danyo = 20;
+    [SerializeField] int vida = 20;
 
     private void Start() {
+
+        
         // La mosca va estar inicialmente en el limite derecho
         transform.position = limiteDerecho.position;
+        slider = GetComponentInChildren<Slider>();
+        QuitarVida(50);
+        print(slider.gameObject.name);
     }
 
     void Update () {
@@ -47,5 +55,9 @@ public class Mosca : MonoBehaviour {
             // La mosca le inglinge un daño al jugador de danyo
             collision.gameObject.GetComponent<Player>().QuitarVida(danyo);
         }
+    }
+
+    public void QuitarVida(int vida) {
+        slider.value -= vida;
     }
 }
